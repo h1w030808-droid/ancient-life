@@ -1,15 +1,140 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="一款单人月令回合制开放世界修仙模拟游戏。" />
-    <title>凡尘问道 · 修仙模拟器</title>
-    <script type="module" crossorigin src="./assets/index-DYUn0hp_.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CruiYO5p.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- GitHub Pages 直接托管版本：不跳转 ChatGPT / chatgpt.site -->
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#08110e" />
+<title>凡尘问道 · 长生仙途</title>
+<style>
+:root{--bg:#07100d;--bg2:#0d1b16;--paper:#121f1a;--paper2:#182820;--ink:#eee8d7;--muted:#9eaa9f;--line:#31483b;--gold:#d7bf78;--jade:#75b59b;--red:#c56e64;--blue:#7ea5c6;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% -10%,#183c2e 0,#09140f 38%,#040806 100%);color:var(--ink);font-family:"Noto Serif SC","Songti SC","Microsoft YaHei",serif}button,input,select{font:inherit}.hidden{display:none!important}button{cursor:pointer}.app{max-width:1440px;margin:auto;min-height:100vh}.top{position:sticky;top:0;z-index:40;display:flex;gap:14px;align-items:center;padding:12px 16px;background:rgba(5,12,9,.92);backdrop-filter:blur(14px);border-bottom:1px solid #20362b}.brand{display:flex;gap:10px;align-items:center;min-width:max-content}.seal{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);transform:rotate(45deg)}.seal span{transform:rotate(-45deg)}.brand b{font-size:18px;letter-spacing:.12em}.brand small{display:block;color:#a99c78;font-size:11px;margin-top:2px}.topstats{display:flex;gap:7px;flex:1;flex-wrap:wrap}.chip{padding:6px 9px;border:1px solid #2a4034;border-radius:999px;background:#0d1914;color:#ccd5ca;font-size:12px}.topbtn{display:flex;gap:7px}.topbtn button{border:1px solid #385040;background:#102018;color:#dde6dc;padding:7px 10px;border-radius:7px}.layout{display:grid;grid-template-columns:285px minmax(0,1fr);gap:16px;padding:16px}.side{position:sticky;top:76px;align-self:start;display:flex;flex-direction:column;gap:12px}.card{background:linear-gradient(180deg,rgba(22,38,31,.97),rgba(12,24,19,.97));border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}.pad{padding:15px}.title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}.title b{letter-spacing:.08em}.muted{color:var(--muted);font-size:12px}.realm{font-size:23px;color:var(--gold);margin:5px 0 8px}.bar{height:8px;border-radius:99px;background:#07100d;overflow:hidden;border:1px solid #23372d}.bar i{display:block;height:100%;background:linear-gradient(90deg,#567f6b,#c9b36f)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:7px}.stat{padding:9px;border:1px solid #263d31;border-radius:8px;background:#0c1712}.stat b{display:block;color:#dcd5bd}.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:12px;border-bottom:1px solid #294034}.tabs button{border:1px solid #304a3b;background:#0d1a14;color:#cbd5cb;padding:8px 12px;border-radius:8px}.tabs button.active{border-color:#bda768;color:#fff2c4;background:#263021}.view{padding:16px}.hero{padding:18px;background:linear-gradient(130deg,rgba(42,70,55,.48),rgba(16,30,24,.2));border:1px solid #365342;border-radius:12px;margin-bottom:14px}.hero h2{margin:0 0 8px;font-size:24px}.hero p{margin:0;color:#b7c2b8;line-height:1.8}.notice{padding:12px 14px;border-left:3px solid var(--gold);background:#111d17;margin-bottom:12px;line-height:1.7}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.choice{min-height:132px;text-align:left;padding:13px;border:1px solid #304b3c;border-radius:10px;background:linear-gradient(180deg,#12231b,#0b1712);color:#e7eadf;transition:.16s}.choice:hover{transform:translateY(-2px);border-color:#8f8052}.choice strong{display:block;color:#f2df9a;margin-bottom:7px}.choice small{display:block;color:#9eada1;line-height:1.55}.tag{display:inline-block;font-size:10px;border:1px solid #49604f;color:#a9baad;border-radius:99px;padding:2px 6px;margin-top:9px}.tag.fate{border-color:#8e7247;color:#e5c781}.tag.danger{border-color:#7d4742;color:#d99b94}.log{display:flex;flex-direction:column;gap:8px;max-height:600px;overflow:auto}.log div{padding:10px 12px;background:#0b1712;border:1px solid #263c31;border-radius:8px;line-height:1.7;color:#cbd4ca}.vols{display:flex;flex-direction:column;gap:10px}.vol{padding:12px;border:1px solid #2c4638;border-radius:9px;background:#0d1914}.vol.current{border-color:#a18b55;background:#1a2017}.vol.lock{opacity:.46}.vol b{color:#e8d18e}.inv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.item{padding:12px;border:1px solid #30493b;border-radius:9px;background:#0c1813}.item b{color:#e4cf8c}.item p{margin:5px 0 0;font-size:12px;color:#9fac9f;line-height:1.6}.footer{padding:18px;text-align:center;color:#607067;font-size:11px}.modal{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.72);display:grid;place-items:center;padding:18px}.dialog{width:min(760px,96vw);max-height:88vh;overflow:auto;background:#0c1712;border:1px solid #5a6e5e;border-radius:14px;box-shadow:0 30px 90px #000;padding:18px}.dialog h3{margin:0 0 12px;color:#ebd38c}.dialog p{line-height:1.9;color:#cbd4ca}.fightline{padding:10px;border-left:2px solid #6d8b76;background:#101d17;margin:8px 0;line-height:1.75}.fightline.hit{border-color:#bf756b}.fightline.win{border-color:#d2b868;color:#f4e3aa}.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.actions button{padding:9px 13px;border-radius:8px;border:1px solid #4b6252;background:#15251c;color:#ecede7}.actions .gold{border-color:#9f8954;background:#40381f;color:#fff1bd}.create{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 20%,#17372a,#07100d 52%,#030605);display:grid;place-items:center;padding:18px}.createbox{width:min(720px,96vw);padding:24px;background:rgba(11,23,18,.96);border:1px solid #566e5d;border-radius:16px;box-shadow:0 30px 100px #000}.createbox h1{text-align:center;letter-spacing:.18em;color:#ecd790}.createbox .lead{text-align:center;color:#9faf9f;line-height:1.8}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.form label{font-size:12px;color:#9eaca0}.form input,.form select{width:100%;margin-top:6px;padding:10px;background:#07110d;color:#e8eadf;border:1px solid #395043;border-radius:8px}.start{width:100%;padding:12px;border:1px solid #b59b5d;background:#3a321c;color:#fff0b7;border-radius:9px;font-weight:700}.warning{color:#d99991}.good{color:#9dcfb9}@media(max-width:980px){.layout{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,1fr)}.choices{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.top{align-items:flex-start;flex-wrap:wrap}.topstats{order:3;width:100%}.layout{padding:10px}.side{grid-template-columns:1fr}.choices,.inv{grid-template-columns:1fr}.form{grid-template-columns:1fr}.brand small{display:none}.choice{min-height:0}}
+</style>
+</head>
+<body>
+<div class="create" id="create">
+  <div class="createbox">
+    <h1>凡尘问道</h1>
+    <p class="lead">凡躯入道，百劫求真。此世不以破案为终点，修炼、资源、旧伤、丹债、人情与道心，都要在漫长仙途中付出代价。</p>
+    <div class="form">
+      <label>姓名<input id="cname" value="韩川" maxlength="8"></label>
+      <label>性别<select id="cgender"><option>男</option><option>女</option></select></label>
+      <label>出身<select id="corigin"><option value="山村遗孤">山村遗孤</option><option value="边城药童">边城药童</option><option value="没落修族旁支">没落修族旁支</option><option value="江湖散人">江湖散人</option></select></label>
+      <label>灵根<select id="croot"><option value="杂灵根">杂灵根 · 修炼慢但适应广</option><option value="土木双灵根">土木双灵根 · 阵法炼体见长</option><option value="火灵根">火灵根 · 斗法炼丹见长</option><option value="风灵根">风灵根 · 身法遁术见长</option></select></label>
+    </div>
+    <button class="start" onclick="startGame()">踏入仙途</button>
+  </div>
+</div>
+<div class="app">
+  <header class="top">
+    <div class="brand"><div class="seal"><span>道</span></div><div><b>凡尘问道</b><small>十一卷 · 长生仙途</small></div></div>
+    <div class="topstats" id="topstats"></div>
+    <div class="topbtn"><button onclick="saveGame()">存档</button><button onclick="loadGame()">读档</button><button onclick="resetGame()">重开</button></div>
+  </header>
+  <div class="layout">
+    <aside class="side">
+      <section class="card pad" id="profile"></section>
+      <section class="card pad" id="condition"></section>
+      <section class="card pad" id="resources"></section>
+    </aside>
+    <main class="card">
+      <nav class="tabs" id="tabs">
+        <button class="active" data-tab="road">仙途</button><button data-tab="story">十一卷</button><button data-tab="bag">法宝功法</button><button data-tab="world">天机简报</button><button data-tab="record">经历</button>
+      </nav>
+      <div class="view" id="view"></div>
+    </main>
+  </div>
+  <div class="footer">《凡尘问道》 · 新版独立构建 · 本地存档</div>
+</div>
+<div class="modal hidden" id="modal"><div class="dialog"><h3 id="mtitle"></h3><div id="mbody"></div><div class="actions" id="mactions"></div></div></div>
+<script>
+const REALMS=[
+ {n:'凡人',min:1,max:10,need:120,life:80},{n:'炼气',min:11,max:20,need:220,life:140},{n:'筑基',min:21,max:40,need:430,life:260},{n:'结丹',min:41,max:60,need:820,life:520},{n:'元婴',min:61,max:80,need:1500,life:1100},{n:'化神',min:81,max:95,need:2800,life:2600},{n:'渡劫',min:96,max:100,need:5200,life:6000},{n:'真仙',min:101,max:120,need:9000,life:20000}
+];
+const VOLUMES=[
+ ['第一卷','山门风雪','凡世求路，山门截杀。你第一次知道修仙界从不因弱小而仁慈。'],
+ ['第二卷','赤砂照骨','炼气立足，赤砂短剑认主；一次资源争夺留下第一笔丹债与旧伤。'],
+ ['第三卷','河眼夜','河底古阵苏醒。所谓异变只是三十六处地脉钉之一，真正的手仍藏在界外。'],
+ ['第四卷','灰界斩妖','筑基后踏入灰界，妖潮背后出现同源界钉。你必须在救人与夺宝之间作取舍。'],
+ ['第五卷','朔州封隙','朔州大裂隙吞城，玄土阵旗第一次完整展开；守城、封隙与突破不可兼得。'],
+ ['第六卷','瀚海镇潮','结丹后远赴瀚海，伏杀与镇潮接连而至。器裂、丹毒与旧敌同时追上来。'],
+ ['第七卷','婴火照夜','元婴大关。旧债、人情、宗门与自身大道开始彼此冲突，选择会真正改变后卷。'],
+ ['第八卷','悬城化神','悬城之上，化神投影压境。你第一次正面触及布下三十六界钉的上界势力。'],
+ ['第九卷','问桥猎界','问桥横断虚空，使者猎界。你以《折虚三式》破法，但每一次越阶都要付出真实代价。'],
+ ['第十卷','天劫开门','渡劫不是终点。太虚返神丹、旧伤、器灵与道心共同决定你能否真正穿过飞升门。'],
+ ['第十一卷','仙界断链','飞升仙界，从采场底层重新立足。断链之战只是仙界第一步，长生路由此真正展开。']
+];
+const ITEMS={
+ weapon:{name:'赤砂短剑',lv:2,desc:'火土灵砂锻成，破甲见长。连续强攻会积累器损。'},
+ flag:{name:'玄土阵旗',lv:0,desc:'未得。布阵后可用地利抵消境界压制。'},
+ seal:{name:'界钉子印',lv:0,desc:'未得。可感应三十六界钉并短暂扰乱空间法则。'},
+ manual:{name:'《引气归元诀》',lv:2,desc:'基础吐纳法，胜在稳。'},
+ fold:{name:'《折虚三式》',lv:0,desc:'未得。专破护体灵幕、遁法与空间类术式。'},
+ pill:{name:'燃脉丹',count:1,desc:'强行拔高一战之力；战后增加丹毒与经脉伤。'},
+ returnPill:{name:'太虚返神丹',count:0,desc:'渡劫前后修补神魂与元气的高阶丹药。'}
+};
+let S=null,activeTab='road';
+const $=s=>document.querySelector(s); const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)); const ri=(a,b)=>Math.floor(Math.random()*(b-a+1))+a; const pick=a=>a[ri(0,a.length-1)];
+function realmOf(lv){return REALMS.find(r=>lv>=r.min&&lv<=r.max)||REALMS[REALMS.length-1]}
+function baseState(name,gender,origin,root){return {ver:'fanchen-1.0',name,gender,origin,root,year:1,month:1,age:17,totalMonths:0,level:1,cult:0,qi:30,maxQi:30,hp:100,maxHp:100,spirit:18,merit:0,dao:0,reputation:0,injury:0,danPoison:0,weaponDamage:0,story:0,storyProgress:0,worldTurn:0,acted:false,flags:{river:false,gray:false,shuo:false,sea:false,city:false,bridge:false,ascended:false},items:JSON.parse(JSON.stringify(ITEMS)),logs:['【凡尘】你背着一只旧布包离开故乡。前路没有天命保证，只有选择与代价。'],news:[],contacts:[],lastChoice:'',battleWins:0,battleLoss:0};}
+function startGame(){S=baseState($('#cname').value.trim()||'无名',$('#cgender').value,$('#corigin').value,$('#croot').value);$('#create').classList.add('hidden');genNews();saveGame();render();showText('第一卷 · 山门风雪','你抵达青岚山外。雪线之上，山门钟声隐约可闻。与此同时，三名蒙面修士沿山道追杀一名负伤弟子。你还只是凡人，连灵气都无法真正驱使。<br><br>你可以绕开，也可以冒险介入。游戏不会替你决定。');}
+function saveGame(){if(!S)return;localStorage.setItem('fanchen_wendao_save',JSON.stringify(S));toast('已存档');}
+function loadGame(){const raw=localStorage.getItem('fanchen_wendao_save');if(!raw)return toast('没有存档');try{S=JSON.parse(raw);$('#create').classList.add('hidden');render();toast('已读档')}catch(e){toast('存档损坏')}}
+function resetGame(){if(!confirm('确定清空当前进度并重开？'))return;localStorage.removeItem('fanchen_wendao_save');location.reload()}
+function log(t){S.logs.unshift(t);if(S.logs.length>120)S.logs.length=120}
+function toast(t){const d=document.createElement('div');d.textContent=t;Object.assign(d.style,{position:'fixed',left:'50%',bottom:'24px',transform:'translateX(-50%)',background:'#1b2b22',color:'#f3e7bc',border:'1px solid #6f805f',padding:'9px 14px',borderRadius:'8px',zIndex:200});document.body.appendChild(d);setTimeout(()=>d.remove(),1400)}
+function advance(months=1){S.totalMonths+=months;S.month+=months;while(S.month>12){S.month-=12;S.year++;S.age++}S.acted=true;S.worldTurn++;heal(months);if(S.worldTurn%2===0)genNews();checkAge();saveGame();render()}
+function heal(months){const k=Math.max(1,months);S.hp=Math.min(S.maxHp,S.hp+k*3);S.injury=Math.max(0,S.injury-k);S.danPoison=Math.max(0,S.danPoison-Math.floor(k/3));S.qi=Math.min(S.maxQi,S.qi+k*4)}
+function checkAge(){const life=realmOf(S.level).life;if(S.age>life){S.hp-=15;if(S.hp<=0){showText('寿尽','你未能在寿元耗尽前突破。此世仙途止于此处。你仍可读取此前存档，或重开一世。');S.hp=1}}}
+function cultNeed(){const r=realmOf(S.level);return Math.round(r.need*(1+(S.level-r.min)*.16))}
+function cultivation(mult=1){const eff=Math.max(.25,1-S.injury*.025-S.danPoison*.018);let root=S.root==='杂灵根'?.9:S.root.includes('双')?1.04:1.12;let gain=Math.round((55+S.level*4+S.items.manual.lv*14)*eff*root*mult);S.cult+=gain;S.qi=Math.min(S.maxQi,S.qi+8);log(`【修炼】闭关吐纳，修为积累 +${gain}${S.injury?'；旧伤拖慢了周天运转':''}。`);let ups=0;while(S.cult>=cultNeed()&&S.level<120){const need=cultNeed();S.cult-=need;S.level++;ups++;S.maxQi+=ri(3,6);S.qi=S.maxQi;S.maxHp+=ri(2,4);S.hp=S.maxHp;if([11,21,41,61,81,96,101].includes(S.level)){const r=realmOf(S.level);log(`【破境】${S.name}踏入${r.n}。寿元与灵力上限随之增长。`);showText(`破境 · ${r.n}`,`灵气如潮灌入经脉。你没有凭空获得胜利，只是终于拥有了面对更高层危险的资格。`);}}advance(S.level>=81?12:S.level>=61?6:S.level>=41?3:1)}
+function gather(){let n=ri(6,14)+Math.floor(S.level/8);S.spirit+=n;let hurt=Math.random()<.17;if(hurt){S.injury+=ri(1,3);S.hp-=ri(5,15)}log(`【采集】你在荒岭与坊市之间奔走，净得灵石 ${n}${hurt?'，却在争夺灵药时受了伤':''}。`);advance(1)}
+function alchemy(){if(S.spirit<8)return toast('灵石不足以购置药材');S.spirit-=8;let ok=Math.random()<(0.64+S.level/220);if(ok){S.items.pill.count++;log('【炼丹】炉火三转，成丹一枚：燃脉丹 +1。')}else{S.danPoison+=1;log('【炼丹】火候失衡，药气反冲。材料尽毁，丹毒 +1。')}advance(1)}
+function repair(){if(S.spirit<6)return toast('灵石不足');S.spirit-=6;S.weaponDamage=Math.max(0,S.weaponDamage-4);S.injury=Math.max(0,S.injury-2);log('【整备】你修补赤砂短剑并调理经脉，暂时压住战后隐患。');advance(1)}
+function study(){S.dao+=ri(2,5);S.items.manual.lv=Math.min(10,S.items.manual.lv+(Math.random()<.16?1:0));log('【参法】你将斗法得失与经文互证，道韵有所增长。');advance(1)}
+function worldEvent(){const e=pick(['西岭兽潮提前南下，数个散修营地被迫迁移。','坊市传出高阶丹药涨价的消息，似有大宗门在秘密囤货。','一处无名地脉夜间泛出黑光，与河眼古阵气息近似。','北域两宗因矿脉冲突交手，已有结丹修士陨落。','有人在灰界边缘见到不属于此界的银色锁链。']);S.news.unshift(`第${S.year}年${S.month}月 · ${e}`);if(S.news.length>30)S.news.length=30;log(`【世界】${e}`);advance(1)}
+function genNews(){const e=pick(['青岚宗内门更换执事，旧派弟子被外调。','南岭灵药减产，筑基丹辅药价格上涨。','灰界裂口扩大半丈，附近妖兽开始迁徙。','朔州城外阵师失踪，留下半面烧毁的阵盘。','瀚海潮位异常，沿岸凡城夜里能听见沉闷雷声。','有人高价收购空间类残器，来历不明。']);S.news.unshift(`第${S.year}年${S.month}月 · ${e}`);if(S.news.length>30)S.news.length=30}
+function choices(){let a=[
+ {t:'闭关修炼',d:'按当前境界闭关，受旧伤与丹毒影响。',tag:'修炼',fn:'cultivation()'},
+ {t:'采药猎兽',d:'赚取灵石与材料，也可能负伤。',tag:'资源',fn:'gather()'},
+ {t:'炼制战丹',d:'消耗8灵石尝试炼制燃脉丹。失败可能增丹毒。',tag:'丹道',fn:'alchemy()'},
+ {t:'修器养伤',d:'花费6灵石修补赤砂短剑，同时缓解旧伤。',tag:'整备',fn:'repair()'},
+ {t:'参悟功法',d:'增加道韵，并有机会提升主修功法层次。',tag:'功法',fn:'study()'},
+ {t:'探听天机',d:'主动关注世界变化，不保证与主线有关。',tag:'世界',fn:'worldEvent()'},
+ {t:'宗门杂役',d:'以时间换资源与人情。',tag:'人情',fn:'sectWork()'},
+ {t:'坊市交易',d:'根据当前修为与声望尝试获利。',tag:'坊市',fn:'market()'},
+ {t:'野外试剑',d:'寻找同境或略高境界对手，磨炼斗法经验。',tag:'斗法',fn:'spar()'},
+ {t:'静养一月',d:'不冒险，优先恢复气血、经脉与丹毒。',tag:'养伤',fn:'rest()'},
+ {t:'整理旧债',d:'处理丹债、人情与旧敌留下的后果。',tag:'因缘',fn:'debt()'},
+ {t:'推演界钉',d:'研究河眼、灰界等异象之间的共同结构。',tag:'线索',fn:'nailStudy()'},
+ {t:'远行访道',d:'用数月时间前往远域，可能得到新法门。',tag:'探索',fn:'travel()'},
+ {t:'磨炼神识',d:'元婴前收益有限，元婴后是核心修炼。',tag:'神识',fn:'spiritTrain()'},
+ {t:'推进当前卷',d:storyDesc(),tag:'天命',fn:'storyAction()'}
+];return a}
+function sectWork(){let n=ri(5,11);S.spirit+=n;S.reputation++;log(`【宗门】你接下护送与值守差事，灵石 +${n}，声望 +1。`);advance(1)}
+function market(){let delta=ri(-4,12)+Math.floor(S.reputation/3);S.spirit=Math.max(0,S.spirit+delta);log(`【坊市】一轮交易结算 ${delta>=0?'+':''}${delta} 灵石。修仙界的买卖从不保证稳赚。`);advance(1)}
+function rest(){S.hp=Math.min(S.maxHp,S.hp+28);S.injury=Math.max(0,S.injury-4);S.danPoison=Math.max(0,S.danPoison-2);log('【静养】你封门谢客，专心导引药力与修补经脉。');advance(1)}
+function debt(){let good=Math.random()<.62;if(good){S.merit+=2;S.reputation+=1;log('【旧债】你还清一笔人情，未来少了一根暗刺。')}else{S.spirit=Math.max(0,S.spirit-5);log('【旧债】旧账找上门来，你付出5灵石才将事情压下。')}advance(1)}
+function nailStudy(){if(S.story<2)return toast('你还没有接触真正的界钉');S.dao+=3;S.merit++;log('【界钉】你将不同异象的阵纹叠在一起，确认它们指向同一套跨界布置。');advance(1)}
+function travel(){let m=S.level>=61?6:3;let lucky=Math.random()<.35;if(lucky){S.items.manual.lv=Math.min(10,S.items.manual.lv+1);S.dao+=4;log('【访道】远行途中得到残卷指点，功法理解更进一步。')}else log('【访道】数月远行无大机缘，但你看清了更广阔的修仙界。');advance(m)}
+function spiritTrain(){let g=S.level>=61?ri(5,10):ri(1,3);S.dao+=g;log(`【神识】神念磨砺，道韵 +${g}。`);advance(S.level>=61?3:1)}
+function spar(){let enemy=Math.max(1,S.level+ri(-2,5));battle('野外试剑',enemy,false,()=>{S.dao+=2;S.reputation+=1;advance(1)})}
+function storyDesc(){const v=VOLUMES[S.story];if(!v)return '仙界主线已展开，继续自由修行。';return `${v[0]}《${v[1]}》：${v[2]}`}
+function storyAction(){if(S.story>=VOLUMES.length){log('【仙界】十一卷主线已走完。你不再被既定卷章束缚，新的仙途由你的行动继续书写。');return advance(3)}const gates=[1,11,21,21,31,41,61,81,86,96,101];let need=gates[S.story];if(S.level<need)return showText('修为不足',`当前卷至少需要修为等级 ${need}。你如今只有 ${S.level} 级。境界差不会因为剧情需要而消失。`);const v=S.story;const enemies=[7,16,24,31,38,52,67,88,93,100,108];const major=[true,true,true,true,true,true,false,true,true,true,true][v];if(major){battle(`${VOLUMES[v][0]} · ${VOLUMES[v][1]}`,enemies[v],true,()=>completeStory(v))}else completeStory(v)}
+function completeStory(v){S.storyProgress++;const rewards=[()=>{S.items.weapon.lv=3;S.spirit+=12},()=>{S.items.weapon.lv=4;S.items.pill.count+=1},()=>{S.items.seal.lv=1;S.flags.river=true},()=>{S.items.flag.lv=4;S.flags.gray=true},()=>{S.items.flag.lv=5;S.flags.shuo=true},()=>{S.items.weapon.lv=6;S.flags.sea=true},()=>{S.dao+=15;S.items.manual.lv=6},()=>{S.items.fold.lv=7;S.flags.city=true},()=>{S.items.seal.lv=7;S.flags.bridge=true},()=>{S.items.returnPill.count=1;S.dao+=20},()=>{S.flags.ascended=true;S.spirit+=100;S.items.weapon.lv=9}];rewards[v]();log(`【卷章完成】${VOLUMES[v][0]}《${VOLUMES[v][1]}》已落幕。所得与代价一并记入仙途。`);S.story++;if(v===2)log('【真相一角】河眼只是一枚地脉钉。三十六处布置仍有三十五处隐在天下。');if(v===10)log('【飞升】你踏入仙界，却从采场与锁链旁重新开始。飞升不是结局。');advance(v>=7?12:v>=5?6:3)}
+function power(){let gear=S.items.weapon.lv*2+S.items.flag.lv+S.items.seal.lv+S.items.fold.lv;let q=S.level+gear+S.items.manual.lv+Math.floor(S.dao/5);q-=S.injury*1.4+S.danPoison*1.1+S.weaponDamage*.7;return Math.max(1,Math.round(q))}
+function battle(title,enemyLv,major,onWin){let enemyPower=enemyLv+ri(4,14)+(major?8:0);let p=power();let diff=enemyLv-S.level;let usingPill=false,usingFlag=false;const start=()=>resolveBattle(title,enemyLv,enemyPower,p,usingPill,usingFlag,onWin);showCustom(title,`<p>敌方修为约 <b>${enemyLv}级 · ${realmOf(enemyLv).n}</b>，你的修为为 <b>${S.level}级 · ${realmOf(S.level).n}</b>。</p><p>真实战力估算：你约 <b>${p}</b>，对手约 <b>${enemyPower}</b>。${diff>5?'<span class="warning">这是越阶生死战。境界压制显著存在。</span>':'双方仍在可正面交手的范围内。'}</p><p>可在开战前使用战丹或阵旗。它们能提高胜算，但代价会在战后结算。</p>`,[
+ {t:`燃脉丹 ×${S.items.pill.count}`,fn:()=>{if(S.items.pill.count<1)return toast('没有燃脉丹');S.items.pill.count--;usingPill=true;p+=15;S.danPoison+=3;S.injury+=2;toast('已服燃脉丹：战力暂升，丹毒与经脉伤已记账')},gold:false},
+ {t:'展开玄土阵旗',fn:()=>{if(S.items.flag.lv<1)return toast('尚无玄土阵旗');usingFlag=true;p+=S.items.flag.lv*2+5;toast('阵势已成：借地利抵消部分压制')},gold:false},
+ {t:'开战',fn:start,gold:true}
+ ])}
+function resolveBattle(title,enemyLv,enemyPower,p,usingPill,usingFlag,onWin){let diff=enemyLv-S.level;let chance;if(diff<=5)chance=p>=enemyPower?.78:.38;else chance=.20+(p-enemyPower)*.01;chance+=(usingFlag?.10:0)+(S.items.fold.lv?Math.min(.12,S.items.fold.lv*.012):0);chance=clamp(chance,.05,.95);let roll=Math.random(),win=roll<chance;let lines=[];lines.push(`<div class="fightline"><b>试探</b>：双方先以神识与灵压碰撞。${diff>5?'对方境界高出一截，灵压像山岳压住经脉，你的每一次吐纳都更艰难。':'彼此气机纠缠，尚无人能一招定局。'}</div>`);lines.push(`<div class="fightline"><b>破法</b>：赤砂短剑切入护体灵光，${S.items.fold.lv?'《折虚三式》沿着灵幕最薄处撕出裂口':'你只能依靠法器锋锐和自身灵力硬撼'}。${usingFlag?'玄土阵旗锁住脚下地脉，强行把对方遁势拖回同一片战场。':''}</div>`);lines.push(`<div class="fightline hit"><b>换招</b>：${usingPill?'燃脉丹药力轰开周天，你的速度骤增，但经脉已经出现灼裂痛感。':'你不敢透支根基，只能在每一次换招间计算灵力消耗。'}赤砂短剑承受连续碰撞，器身震鸣。</div>`);if(win){lines.push(`<div class="fightline win"><b>决胜</b>：你抓住对方术式回气的一瞬，将此前铺下的手段同时收束。剑光、阵势与灵力在一点爆开，对手护体灵幕终于崩碎。</div>`);S.battleWins++;S.weaponDamage+=major?2:1;S.injury+=major?ri(1,4):ri(0,2);S.hp=Math.max(8,S.hp-ri(4,18));log(`【胜战】${title}。战后旧伤 ${S.injury}，器损 ${S.weaponDamage}，丹毒 ${S.danPoison}。`);showCustom(`${title} · 胜`,lines.join('')+`<p>胜利没有抹掉代价。你需要之后用时间、灵石与丹药恢复。</p>`,[{t:'收剑',fn:()=>{closeModal();onWin&&onWin()},gold:true}]);}else{lines.push(`<div class="fightline hit"><b>溃势</b>：境界与战力差距最终压垮了你的节奏。护体灵光先碎，随后剑势被正面打散。你只能以伤换出退路。</div>`);S.battleLoss++;S.injury+=ri(3,7);S.weaponDamage+=ri(2,4);S.hp=Math.max(5,S.hp-ri(20,45));S.spirit=Math.max(0,S.spirit-ri(3,12));log(`【败战】${title}。你负伤退走，资源与器物均有损失。`);showCustom(`${title} · 败`,lines.join('')+`<p class="warning">此战未能推进卷章。先养伤、修器、积累资源，再回来。</p>`,[{t:'退走',fn:()=>{closeModal();advance(2)},gold:true}]);}}
+function showText(t,html){showCustom(t,`<p>${html}</p>`,[{t:'知晓',fn:closeModal,gold:true}])}
+function showCustom(t,html,acts){$('#mtitle').textContent=t;$('#mbody').innerHTML=html;const a=$('#mactions');a.innerHTML='';acts.forEach(x=>{const b=document.createElement('button');b.textContent=x.t;if(x.gold)b.classList.add('gold');b.onclick=x.fn;a.appendChild(b)});$('#modal').classList.remove('hidden')}
+function closeModal(){$('#modal').classList.add('hidden')}
+function render(){if(!S)return;const r=realmOf(S.level),need=cultNeed(),pct=clamp(S.cult/need*100,0,100);$('#topstats').innerHTML=`<span class="chip">第${S.year}年 · ${S.month}月</span><span class="chip">${S.age}岁</span><span class="chip">${r.n} ${S.level}级</span><span class="chip">灵石 ${S.spirit}</span>`;$('#profile').innerHTML=`<div class="title"><b>道籍</b><span class="muted">${S.gender} · ${S.origin}</span></div><div style="font-size:20px">${S.name}</div><div class="realm">${r.n} · ${S.level}级</div><div class="bar"><i style="width:${pct}%"></i></div><div class="muted" style="margin-top:6px">修为 ${S.cult} / ${need} · 寿元约 ${r.life}</div><div class="grid2" style="margin-top:12px"><div class="stat">气血<b>${S.hp}/${S.maxHp}</b></div><div class="stat">灵力<b>${S.qi}/${S.maxQi}</b></div><div class="stat">道韵<b>${S.dao}</b></div><div class="stat">战力<b>${power()}</b></div></div>`;$('#condition').innerHTML=`<div class="title"><b>战后状态</b><span class="muted">代价不会消失</span></div><div class="grid2"><div class="stat">经脉旧伤<b class="${S.injury>5?'warning':''}">${S.injury}</b></div><div class="stat">丹毒<b class="${S.danPoison>4?'warning':''}">${S.danPoison}</b></div><div class="stat">器损<b>${S.weaponDamage}</b></div><div class="stat">胜 / 负<b>${S.battleWins} / ${S.battleLoss}</b></div></div>`;$('#resources').innerHTML=`<div class="title"><b>随身</b><span class="muted">灵根：${S.root}</span></div><div class="muted">燃脉丹 × ${S.items.pill.count}<br>太虚返神丹 × ${S.items.returnPill.count}<br>声望 ${S.reputation} · 功德 ${S.merit}</div>`;renderView()}
+function renderView(){const v=$('#view');if(activeTab==='road'){const cs=choices();v.innerHTML=`<div class="hero"><h2>${storyDesc().split('：')[0]}</h2><p>${storyDesc().split('：').slice(1).join('：')||'十一卷之后，仙途仍在继续。'}</p></div>${S.injury>=6?'<div class="notice warning">经脉旧伤已经明显影响修炼与斗法。继续强行越阶，风险会快速累积。</div>':''}<div class="choices">${cs.map((c,i)=>`<button class="choice" onclick="${c.fn}"><strong>${String(i+1).padStart(2,'0')} · ${c.t}</strong><small>${c.d}</small><span class="tag ${c.tag==='天命'?'fate':''}">${c.tag}</span></button>`).join('')}</div>`}else if(activeTab==='story'){v.innerHTML=`<div class="hero"><h2>十一卷仙途</h2><p>主线从凡间入门延伸至渡劫、飞升与仙界立足。每卷都要求对应修为、资源与战斗准备；失败不会被剧情强行改写成胜利。</p></div><div class="vols">${VOLUMES.map((x,i)=>`<div class="vol ${i===S.story?'current':''} ${i>S.story?'lock':''}"><b>${x[0]} · ${x[1]}</b><div class="muted" style="margin-top:6px">${x[2]}</div></div>`).join('')}</div>`}else if(activeTab==='bag'){let its=[S.items.weapon,S.items.flag,S.items.seal,S.items.manual,S.items.fold,{name:S.items.pill.name,lv:`数量 ${S.items.pill.count}`,desc:S.items.pill.desc},{name:S.items.returnPill.name,lv:`数量 ${S.items.returnPill.count}`,desc:S.items.returnPill.desc}];v.innerHTML=`<div class="hero"><h2>法宝 · 功法 · 丹药</h2><p>高阶装备可以帮助越阶，但不能抹去境界压制。强行依赖战丹与法器，会留下丹毒、器裂和经脉伤。</p></div><div class="inv">${its.map(x=>`<div class="item"><b>${x.name}</b><div class="muted">${typeof x.lv==='number'?'等级 '+x.lv:x.lv}</div><p>${x.desc}</p></div>`).join('')}</div>`}else if(activeTab==='world'){v.innerHTML=`<div class="hero"><h2>天机简报</h2><p>世界在你不介入时仍会变化，但只有你真正选择行动后，相关事件才会展开为详细叙事。</p></div><div class="log">${S.news.map(x=>`<div>${x}</div>`).join('')||'<div>暂无简报。</div>'}</div>`}else{v.innerHTML=`<div class="hero"><h2>仙途经历</h2><p>修炼、战斗、失败、旧伤与偿还的代价都记录在这里。</p></div><div class="log">${S.logs.map(x=>`<div>${x}</div>`).join('')}</div>`}}
+$('#tabs').addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')return;document.querySelectorAll('#tabs button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');activeTab=e.target.dataset.tab;renderView()});
+window.addEventListener('load',()=>{const raw=localStorage.getItem('fanchen_wendao_save');if(raw){try{S=JSON.parse(raw);$('#create').classList.add('hidden');render()}catch(e){}}});
+</script>
+</body>
 </html>

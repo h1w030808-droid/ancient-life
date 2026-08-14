@@ -6,7 +6,6 @@ on:
     branches: [main]
     paths:
       - 'index.html'
-      - 'assets/**'
       - 'android-app/**'
       - '.github/workflows/build-android.yml'
 
@@ -38,11 +37,11 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Bundle game into APK
+      - name: Bundle new Fanchen Wendao into APK
         run: |
-          mkdir -p android-app/app/src/main/assets/www/assets
+          rm -rf android-app/app/src/main/assets/www
+          mkdir -p android-app/app/src/main/assets/www
           cp index.html android-app/app/src/main/assets/www/index.html
-          cp assets/* android-app/app/src/main/assets/www/assets/
 
       - name: Build APK
         working-directory: android-app
@@ -67,5 +66,5 @@ jobs:
           gh release delete android-latest --yes --cleanup-tag || true
           git push origin :refs/tags/android-latest || true
           gh release create android-latest release/fanchen-wendao.apk \
-            --title '凡尘问道 Android 最新版' \
-            --notes '安装 fanchen-wendao.apk 即可。游戏网页资源已打包进 APK，本体运行不依赖 GitHub Pages 或 ChatGPT。'
+            --title '凡尘问道 Android 新版' \
+            --notes '新版十一卷长线仙途。游戏本体已打包进 APK，不依赖 GitHub Pages 或 ChatGPT。'
